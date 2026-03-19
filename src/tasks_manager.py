@@ -21,7 +21,7 @@ def add_task(data):
     priority = int(input("Priority (1-10):\t"))
 
     task = {
-        "id": len(data["tasks"]) + 1,
+        "id": max((task["id"] for task in data["tasks"]), default=0) + 1,
         "subject": sub,
         "topic": topic,
         "assign_date": assign,
@@ -42,10 +42,6 @@ def view_task(data):
     for task in data["tasks"]:
         print(f"\n[{task["id"]}] {task["subject"]} - {task["topic"]}")
         print(f"Due: {task["due_date"]} | Priority: {task["priority"]} | Status: {task["status"]}")
-        if task["status"] == "Completed":
-            inp = input("Date of Completion (DD-MM-YYY):\t")
-            task["complete_date"] = inp
-            print(f"Completion Date: {task["complete_date"]}")
 
 def mark_complete(data):
     view_task(data)
@@ -53,9 +49,11 @@ def mark_complete(data):
     for task in data["tasks"]:
         if task["id"] == task_id:
             task["status"] = "Completed"
-        save_tasks(data)
-        print(str(task_id) + " Marked Complete")
-        return
+            inp = input("Date of Completion (DD-MM-YYYY):\t")
+            task["complete_date"] = inp
+            save_tasks(data)
+            print(str(task_id) + " Marked Complete")
+            return            
     print("Task not found")
 
 def del_task(data):
