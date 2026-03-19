@@ -2,12 +2,12 @@
 
 All notable changes to this project will be documented here.
 
-## [Unreleased]
+## [0.1.1] - 2026-03-20
 
 ### Fixed
-- Fixed crash in `add_task` when the task list is empty (caused by `max()` being called on an empty sequence)
-- Fixed `mark_complete` always returning after checking the first task regardless of whether it matched, due to misindented `return` statement
-- Fixed typo in "Date of Completion" input prompt (`DD-MM-YYYy` → `DD-MM-YYYY`)
+- Fixed id starting with the one which was deleted when adding a new task in `add_task` (caused by `len()` returning duplicate ids)
+- Fixed `view_task` which was asking for completion date instead of asking on completion, feature now added to `mark_complete`
+- Fixed typo in "Date of Completion" input prompt (`DD-MM-YYY` → `DD-MM-YYYY`)
 
 ## [0.1.0] - 2026-03-19
 
