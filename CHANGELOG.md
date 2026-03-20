@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented here.
 
+## [Unreleased]
+
+### Added
+- `filter_sort_tasks` in `tasks_manager.py` — filter tasks by status (All/Pending/Completed) and sort by priority or due date
+- `edit_task` in `tasks_manager.py` — edit any field of an existing task, with current values shown as defaults
+- Menu options 5 and 6 in `main.py` for Filter/Sort and Edit task respectively
+
+### Changed
+- `view_task` now accepts an optional `tasks` parameter to support displaying filtered task lists
+
+
+
 ## [0.1.1] - 2026-03-20
 
 ### Fixed
