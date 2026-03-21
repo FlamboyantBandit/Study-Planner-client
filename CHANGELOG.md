@@ -12,6 +12,7 @@ All notable changes to this project will be documented here.
 ### Changed
 - `view_task` now accepts an optional `tasks` parameter to support displaying filtered task lists
 
+## [0.1.1] - 2026-03-19
 
 ### Fixed
 - Fixed id starting with the one which was deleted when adding a new task in `add_task` (caused by `len()` returning duplicate ids)
