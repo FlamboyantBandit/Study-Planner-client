@@ -13,9 +13,6 @@ All notable changes to this project will be documented here.
 - `view_task` now accepts an optional `tasks` parameter to support displaying filtered task lists
 
 
-
-## [0.1.1] - 2026-03-20
-
 ### Fixed
 - Fixed id starting with the one which was deleted when adding a new task in `add_task` (caused by `len()` returning duplicate ids)
 - Fixed `view_task` which was asking for completion date instead of asking on completion, feature now added to `mark_complete`
