@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented here.
 
-## [Unreleased]
+## [0.2.0] - 2026-03-22
 
 ### Added
 - `filter_sort_tasks` in `tasks_manager.py` — filter tasks by status (All/Pending/Completed) and sort by priority or due date
