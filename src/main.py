@@ -8,7 +8,9 @@ while True:
     print("2. View tasks")
     print("3. Mark task complete")
     print("4. Delete task")
-    print("5. Exit")
+    print("5. Filter/Sort task")
+    print("6. Edit task")
+    print("7. Exit")
 
     choice = int(input("Choose an option:\t"))
     if choice == 1:
@@ -20,6 +22,10 @@ while True:
     elif choice == 4:
         del_task(data)
     elif choice == 5:
+        filter_sort_tasks(data)
+    elif choice == 6:
+        edit_task(data)
+    elif choice == 7:
         break
     else:
         print("Invalid option, try again")
